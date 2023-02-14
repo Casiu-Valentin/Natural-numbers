@@ -1,0 +1,19 @@
+#Produced by/Realizat de Casiu George Valentin
+
+def cmmdc(a,b):
+    while a!=b:
+        if a>b:
+            a=a-b
+        else:
+            b=b-a
+    return(a)
+
+def cmmmc(a,b):
+    c=a
+    d=b
+    while c!=d:
+        if c<d:
+            c=c+a
+        else:
+            d=d+b
+    return(c)
