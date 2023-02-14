@@ -1,0 +1,36 @@
+#Produced by/Realizat de Casiu George Valentin
+"""
+Write a recursive funtion to transform a natural numer n, from base 10 in base k (1<k<10)
+Să se scrie o funcţie recursivă pentru a transforma un număr natural n, din baza 10 în baza k (1<k<10).
+"""
+
+def citirenat(text):# natural number reading/citire numar natural
+    n=''
+    while not(n.isdecimal()): # if n is not decimal/daca n nu e zecimal
+        n = input(text)
+        n = n.strip(' +')# remove spaces and '+' from the beginning and end of number/elimina spatiile libere si '+' de la inceputul si sfarsitul numarului
+    return int(n)
+
+def afisarevector(v):#display the vector/afiseaza vectorul
+    for el in v:
+        print(el,end="")
+    print()
+
+def transformr(n,b):# this is recursive transformation function/aceasta este functia recursiva de transformare
+    rest=n%b
+    if n>=b: transformr(n//b,b)
+    print (rest,end='')
+
+def transform(n,b):#this is the iterative transformation function/ aceasta este functia iterativa de transformare
+    v=[]
+    while n!=0:
+        v.append(n%b)
+        n//=b
+    return v
+
+#The main program/ Programul principal
+n=citirenat("Enter the number/Introduceti numarul:")
+b=citirenat("Enter the base/Introduceti baza:")
+print("The transform number is/Numarul transformat este:")
+v=transform(n,b)[::-1]#we reverse the vector/rasturnam vectorul
+afisarevector(v)
