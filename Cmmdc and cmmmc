@@ -1,4 +1,7 @@
 #Produced by/Realizat de Casiu George Valentin
+"""
+Sǎ se afişeze cel mai mare divizor comun si cle mai mic multiplu comun a doua numere./Display the greatest common divisor and the least common multiple of two numbers.
+"""
 
 def cmmdc(a,b):
     while a!=b:
@@ -7,13 +10,31 @@ def cmmdc(a,b):
         else:
             b=b-a
     return(a)
-
+   
+def cmmdcr(a,b):#the recursive version/varianta recursiva
+    if a==b: return a
+    elif a>b:return cmmdcr(a-b,b)
+    else: return cmmdcr(a,b-a)
+   
 def cmmmc(a,b):
     c=a
     d=b
-    while c!=d:
-        if c<d:
-            c=c+a
+    while a!=b:
+        if a<b:
+            a+=c
         else:
-            d=d+b
-    return(c)
+            b+=d
+    return a
+
+def citirenat(text):# natural number reading/citire numar natural
+    n=''
+    while not(n.isdecimal()): # if n is not decimal/daca n nu e zecimal
+        n = input(text)
+        n = n.strip(' +')# remove spaces and '+' from the beginning and end of number/elimina spatiile libere si '+' de la inceputul si sfarsitul numarului
+    return int(n)
+    
+# The main program/Programul principal
+a=citirenat("Enter the first number/Introduceti primul numar:")
+b=citirenat("Enter the second number/Introduceti al doilea numar:")
+print("The gratest common divisor/Cmmdc=", cmmdc(a,b))
+print("The least common multiple/Cmmmc=", cmmmc(a,b))
