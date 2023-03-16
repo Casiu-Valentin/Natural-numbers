@@ -23,3 +23,11 @@ def suma(n):
 
 n=citirenat("Enter the number/Introduceti numarul:")
 print(suma(n))
+
+"""
+#version 2
+s=0
+for i in range (n+1):
+    s+=i
+print("S=",s)
+"""
