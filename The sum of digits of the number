@@ -14,10 +14,13 @@ def citirenat(text):# natural number reading/citire numar natural
 def sumr(n):
     if n==0: return 0
     else: return n%10+sumr(n//10)
+    
 
 #The main program/ Programul principal
 n=citirenat("Enter the number/Introduceti numarul:")
 print("The sum of digits of the number is/Suma cifrelor numarului este:", sumr(n))
+
+
 """
 #version 1/varianta 1
 n=citirenat("Enter the number/Introduceti numarul:")
