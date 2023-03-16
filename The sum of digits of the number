@@ -22,7 +22,7 @@ print("The sum of digits of the number is/Suma cifrelor numarului este:", sumr(n
 
 
 """
-#version 1/varianta 1
+#version 2/varianta 2
 n=citirenat("Enter the number/Introduceti numarul:")
 s=0
 for i in range(len(str(n))):
@@ -31,7 +31,7 @@ print("The sum of digits of the number is/Suma cifrelor numarului este:", s)
 """
 
 """
-#version 2/varianta 2
+#version 3/varianta 3
 n=citirenat("Enter the number/Introduceti numarul:")
 s= 0
 while n != 0:#calculate how may characters have number. We can change with n=len(str(m))/calculam cate caractere are numarul. Se poate inlocuii cu nr=len(str(m))
